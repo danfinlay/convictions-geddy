@@ -22,7 +22,8 @@ var config = {
 , hostname: null
 , port: 4000
 , model: {
-    defaultAdapter: 'memory'
+    defaultAdapter: 'mongo',
+    db: { mongo: { dbname: 'our-convictions' }
 	}
 , sessions: {
     store: 'memory'

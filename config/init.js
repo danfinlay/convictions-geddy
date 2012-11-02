@@ -1,4 +1,9 @@
-
+var mongo = require('mongo-wrapper')
+geddy.db = mongo.db('localhost', 27017, 'our-convictions');
+geddy.db.collection('users');
+geddy.db.collection('groups');
+geddy.db.collection('convictions');
+geddy.db.collection('replies');
 // Add uncaught-exception handler in prod-like environments
 if (geddy.config.environment != 'development') {
   process.addListener('uncaughtException', function (err) {
