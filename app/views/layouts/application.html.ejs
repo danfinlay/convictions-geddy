@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Geddy App | This app uses Geddy.js</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <%- scriptLink('/js/jquery.min.js', {type:'text/javascript'}) %>
+    <%- scriptLink('/js/bootstrap.min.js', {type:'text/javascript'}) %>
+    <%- scriptLink('/js/jquery-ui-1.9.1.custom.min.js', {type:'text/javascript'}) %>
+    <%- scriptLink('/js/main.js', {type:'text/javascript'}) %>
+
+    <%- styleLink('/css/bootstrap.min.css', {rel:'stylesheet'}) %>
+    <%- styleLink('/css/style.css', {rel:'stylesheet'}) %>
+    <%- styleLink('/css/bootstrap.responsive.min.css', {rel:'stylesheet'}) %>
+    <%- styleLink('/css/jquery-ui-1.9.1.custom.min.css', {rel:'stylesheet'}) %>
+
+    <!-- The fav and touch icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <title>Convictions</title>
+    <div class="groupMenu">
+      <a href="#" id="groupList">My Groups</a>&nbsp-&nbsp
+      <a href="#" id ="new">New Group</a>&nbsp-&nbsp
+      <a href="#" id ="USA">USA</a>&nbsp-&nbsp
+      <a href="#" id ="California">California</a>&nbsp-&nbsp
+      <a href="#" id ="Bay Area">Bay Area</a>&nbsp-&nbsp
+      <a href="#" id ="Internet">Internet</a>&nbsp-&nbsp
+      <a href="#" id ="Gaming">Gaming</a>&nbsp-&nbsp
+      <a href="#" id ="Movies">Movies</a>&nbsp-&nbsp</a>
+
+      <!--This should only be loaded if user is not logged in:-->
+      <div class="loginBox">
+        Want to join?  <a href="login" id="login-link">login</a> or <a href="register" id="register-link">register</a> in seconds.
+      </div>
+      <div class="loginAlert">
+        <input type="text" placeholder="username"></input><br>
+        <input type="secure" placeholder="password"></input><br>
+        <input type="submit"></input>
+        <input type="checkbox">Stay logged in</input><br>
+        [<a href="close" id="close">close</a>]
+      </div>
+      <div class="registerAlert">
+        This is the register form.  Does it work?
+        [<a href="close" id="close">close</a>]
+      </div>
+      <!--End un-logged-in section.-->
+
+
+      <!--This should only be loaded if the user is logged in:-->
+      <div class="loggedinBox">
+        <a href="login" id="user-profile">danfinlay</a> [0 Alerts] <a href="register" id="log-out">logout</a>
+      </div>
+      <!--End logged-in section.-->
+
+    </div>
+    <%- imageTag('img/logo.png', {style:"inline", alt:"Our Convictions: Finding Common Ground."}) %>
+  </head>
+
+  <body>
+      <%- yield(); %>
+  </body>
+</html>
+<script>
+  $(document).ready(mainReadyFunction());
+ </script>

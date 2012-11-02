@@ -1,0 +1,17 @@
+<div class="hero-unit">
+  <h2><%= conviction.name %></h2>
+  <%- linkTo('Edit this conviction', editConvictionPath(params.id), {class: 'btn pull-right'}); %>
+</div>
+
+<h2>Conviction Properties</h2>
+<% for(var i in conviction) { -%>
+<% if(i !== 'saved') { -%>
+<div class="row list-item">
+  <div class="span8">
+    <h3><%= i %></h3>
+  </div>
+  <div class="span4">
+    <h3><i class="icon-list-alt"></i><%= conviction[i] %></h3>
+  </div>
+</div>
+<% } -%><% } -%>

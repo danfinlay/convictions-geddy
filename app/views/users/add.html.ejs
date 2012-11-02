@@ -1,0 +1,61 @@
+<div class="hero-unit">
+  <form id="user-form" class="form-horizontal" action="/users" method="POST">
+    <fieldset>
+      <legend>Create a new User</legend>
+      <% if(params.errors) { %>
+      <div class="control-group">
+        <ul>
+        <% for(var err in params.errors) { %>
+          <li><%= params.errors[err]; %></li>
+        <% } %>
+        </ul>
+      </div>
+      <% } %>
+      <div class="control-group">
+        <label for="name" class="control-label">name</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'name'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="groups" class="control-label">groups</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="joined" class="control-label">joined</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'datetime', class:'span3', name:'joined'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="passwordhash" class="control-label">passwordhash</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'passwordhash'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="email" class="control-label">email</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'email'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="description" class="control-label">description</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'description'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="convictions" class="control-label">convictions</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+    <div class="form-actions">
+      <%- contentTag('input', 'Add', {type: 'submit', class: 'btn btn-primary'}) %>
+    </div>
+    </fieldset>
+  </form>
+</div>

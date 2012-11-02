@@ -1,0 +1,76 @@
+<div class="hero-unit">
+  <form id="conviction-form" class="form-horizontal" action="/convictions/<%= params.id %>?_method=PUT" method="POST">
+    <fieldset>
+      <legend>Update this Conviction</legend>
+      <% if(params.errors) { %>
+      <div class="control-group">
+        <ul>
+        <% for(var err in params.errors) { %>
+          <li><%= params.errors[err]; %></li>
+        <% } %>
+        </ul>
+      </div>
+      <% } %>
+      <div class="control-group">
+        <label for="name" class="control-label">name</label>
+        <div class="controls">
+          <%- contentTag('input', conviction.name, {type:'text', class:'span6', name:'name'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="description" class="control-label">description</label>
+        <div class="controls">
+          <%- contentTag('input', conviction.description, {type:'text', class:'span6', name:'description'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="author" class="control-label">author</label>
+        <div class="controls">
+          <%- contentTag('input', conviction.author, {type:'text', class:'span6', name:'author'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="replies" class="control-label">replies</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="infavor" class="control-label">infavor</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="against" class="control-label">against</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="dateadded" class="control-label">dateadded</label>
+        <div class="controls">
+          <%- contentTag('input', conviction.dateadded, {type:'datetime', class:'span3', name:'dateadded'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="open" class="control-label">open</label>
+        <div class="controls">
+          <select name="open", class="span1">
+            <% if(conviction.open) { -%>
+            <option>false</option>
+            <option selected>true</option>
+            <% } else { -%>
+            <option selected>false</option>
+            <option>true</option>
+            <% } -%>
+          </select>
+        </div>
+      </div>
+    <div class="form-actions">
+      <%- contentTag('input', 'Save', {type: 'submit', class: 'btn btn-primary'}) %>
+      <%- contentTag('button', 'Remove', {type: 'submit', formaction: '/convictions/' + params.id + '?_method=DELETE', formmethod: 'POST', class: 'btn btn-danger'}) %>
+    </div>
+    </fieldset>
+  </form>
+</div>

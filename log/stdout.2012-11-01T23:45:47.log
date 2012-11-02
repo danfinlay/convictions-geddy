@@ -1,0 +1,50 @@
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Server starting with config: {
+  "environment": "production",
+  "workers": 4,
+  "port": 4000,
+  "debug": false,
+  "rotateWorkers": true,
+  "rotationWindow": 7200000,
+  "rotationTimeout": 300000,
+  "logDir": "/Users/somniac/Projects/convictions-geddy/log",
+  "gracefulShutdownTimeout": 30000,
+  "heartbeatInterval": 5000,
+  "heartbeatWindow": 20000,
+  "staticFilePath": "/Users/somniac/Projects/convictions-geddy/public",
+  "sessions": {
+    "store": "cookie",
+    "key": "sid",
+    "expiry": 1209600
+  },
+  "cookieSessionKey": "sdata",
+  "metrics": null,
+  "i18n": {
+    "defaultLocale": "en-us",
+    "loadPaths": [
+      "/Users/somniac/Projects/convictions-geddy/config/locales"
+    ]
+  },
+  "spdy": null,
+  "ssl": null,
+  "hostname": null,
+  "connectCompatibility": false,
+  "secret": "mcpBjRIiSWoopnoqRVBxozjwLSA5XiQA8oPASrbvTKNBBtOS7oGQNT2bUPafnqucOGVc2Fk7rYCpISLSNnuDHPpq7FhqGaSnRzkfvoKqM7g6ET1GR94pj7ihPtVhgMjh",
+  "detailedErrors": false
+}
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Creating 4 worker processes.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Conviction. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Group. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Reply. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Conviction. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for User. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Group. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Reply. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for User. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Conviction. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Group. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Reply. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for User. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Conviction. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Group. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for Reply. Set .adapter for this model, or set model.defaultAdapter.
+[Fri, 02 Nov 2012 06:42:15 GMT] INFO Model adapter not found for User. Set .adapter for this model, or set model.defaultAdapter.

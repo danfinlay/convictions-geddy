@@ -1,0 +1,82 @@
+<div class="hero-unit">
+  <form id="group-form" class="form-horizontal" action="/groups" method="POST">
+    <fieldset>
+      <legend>Create a new Group</legend>
+      <% if(params.errors) { %>
+      <div class="control-group">
+        <ul>
+        <% for(var err in params.errors) { %>
+          <li><%= params.errors[err]; %></li>
+        <% } %>
+        </ul>
+      </div>
+      <% } %>
+      <div class="control-group">
+        <label for="name" class="control-label">name</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'name'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="convictions" class="control-label">convictions</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="members" class="control-label">members</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="public" class="control-label">public</label>
+        <div class="controls">
+          <select name="public", class="span1">
+            <option selected>false</option>
+            <option>true</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="administrators" class="control-label">administrators</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="description" class="control-label">description</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'description'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="created" class="control-label">created</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'datetime', class:'span3', name:'created'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="location" class="control-label">location</label>
+        <div class="controls">
+          object
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="radius" class="control-label">radius</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'number', class:'span2', name:'radius'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="officialsite" class="control-label">officialsite</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'officialsite'}) %>
+        </div>
+      </div>
+    <div class="form-actions">
+      <%- contentTag('input', 'Add', {type: 'submit', class: 'btn btn-primary'}) %>
+    </div>
+    </fieldset>
+  </form>
+</div>

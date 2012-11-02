@@ -1,0 +1,17 @@
+<div class="hero-unit">
+  <h2>All Groups</h2>
+  <%- linkTo('Create a new Group', addGroupPath, {class: 'btn pull-right'}); %>
+</div>
+
+<% if (groups) { %>
+<% for (var i = 0, ii = groups.length; i < ii; i++) { %>
+<div class="row list-item">
+  <div class="span8">
+    <h3><%- linkTo(groups[i].name, groupPath(groups[i].id)); %></h3>
+  </div>
+  <div class="span4">
+    <h3><i class="icon-list-alt"></i><%= groups[i].id; %></h3>
+  </div>
+</div>
+<% } %>
+<% } %>

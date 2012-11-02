@@ -1,0 +1,100 @@
+<div class="hero-unit">
+  <form id="reply-form" class="form-horizontal" action="/replies" method="POST">
+    <fieldset>
+      <legend>Create a new Reply</legend>
+      <% if(params.errors) { %>
+      <div class="control-group">
+        <ul>
+        <% for(var err in params.errors) { %>
+          <li><%= params.errors[err]; %></li>
+        <% } %>
+        </ul>
+      </div>
+      <% } %>
+      <div class="control-group">
+        <label for="title" class="control-label">title</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'title'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="body" class="control-label">body</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'body'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="author" class="control-label">author</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'text', class:'span6', name:'author'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="isSupport" class="control-label">isSupport</label>
+        <div class="controls">
+          <select name="isSupport", class="span1">
+            <option selected>false</option>
+            <option>true</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="isObjection" class="control-label">isObjection</label>
+        <div class="controls">
+          <select name="isObjection", class="span1">
+            <option selected>false</option>
+            <option>true</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="isEvidence" class="control-label">isEvidence</label>
+        <div class="controls">
+          <select name="isEvidence", class="span1">
+            <option selected>false</option>
+            <option>true</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="support" class="control-label">support</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="objections" class="control-label">objections</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="evidence" class="control-label">evidence</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="dateadded" class="control-label">dateadded</label>
+        <div class="controls">
+          <%- contentTag('input', '', {type:'datetime', class:'span3', name:'dateadded'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="agree" class="control-label">agree</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="disagree" class="control-label">disagree</label>
+        <div class="controls">
+          array
+        </div>
+      </div>
+    <div class="form-actions">
+      <%- contentTag('input', 'Add', {type: 'submit', class: 'btn btn-primary'}) %>
+    </div>
+    </fieldset>
+  </form>
+</div>

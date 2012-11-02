@@ -1,0 +1,17 @@
+<div class="hero-unit">
+  <h2>All Convictions</h2>
+  <%- linkTo('Create a new Conviction', addConvictionPath, {class: 'btn pull-right'}); %>
+</div>
+
+<% if (convictions) { %>
+<% for (var i = 0, ii = convictions.length; i < ii; i++) { %>
+<div class="row list-item">
+  <div class="span8">
+    <h3><%- linkTo(convictions[i].name, convictionPath(convictions[i].id)); %></h3>
+  </div>
+  <div class="span4">
+    <h3><i class="icon-list-alt"></i><%= convictions[i].id; %></h3>
+  </div>
+</div>
+<% } %>
+<% } %>
